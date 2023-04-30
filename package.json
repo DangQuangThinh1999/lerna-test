@@ -6,6 +6,16 @@
   ],
   "useWorkspaces": true,
   "devDependencies": {
-    "lerna": "^6.6.1"
+    "lerna": "^6.6.1",
+    "nx": "16.0.1",
+    "nx-cloud": "latest"
+  },
+  "scripts": {
+    "start": "lerna run start --scope={admin,client}",
+    "dev": "lerna run dev --scope={admin,client}",
+    "build": "lerna run build --scope={admin,client}",
+    "test": "lerna run test --scope={admin,client}",
+    "new-version": "lerna version --conventional-committers --yes",
+    "diff": "lerna lint"
   }
 }
